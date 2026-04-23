@@ -15,6 +15,9 @@ authors = [
 dependencies = [
     "numpy >= 1.22",
     "matplotlib >= 3.5",
+    "pandas >= 2.0.0",
+    "icartt >= 2.0.0",
+    "plotly >= 6.0.0"
 ]
 
 [project.optional-dependencies]
