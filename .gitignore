@@ -22,3 +22,5 @@ venv/
 # macOS
 .DS_Store
 
+# pip packaging (students will create these)
+# pyproject.toml  ← intentionally not ignored — students add this
