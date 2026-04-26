@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import plotly.express as px 
+from importlib import resources # Needed to add this because after pip install, the run command didn't work because it could not find the data files
 
 # Import the data processing and plotting functions
 from .data_loading_functions import read_icartt_data_files
@@ -15,12 +16,12 @@ from .plotting_functions import plot_peaks_above_baseline
 
 # Analysis setup - these inputs can be modified depending on your interests and what files you want to look at 
 # USOS
-data_file_name = 'USOS_PTR_MobileLab_20240803.ict'
-coord_file_name = 'USOS_MetNav_MobileLab_20240803.ict'
+data_file_name = resources.files('spatiotemporal_analysis').joinpath('USOS_PTR_MobileLab_20240803.ict')
+coord_file_name = resources.files('spatiotemporal_analysis').joinpath('USOS_MetNav_MobileLab_20240803.ict')
 
 # AEROMMA
-#data_file_name = 'AEROMMA_NOAAPTR_DC8_20230822.ict'
-#coord_file_name = 'AEROMMA_MetNav_DC8_20230822.ict'
+#data_file_name = resources.files('spatiotemporal_analysis').joinpath('AEROMMA_NOAAPTR_DC8_20230822.ict')
+#coord_file_name = resources.files('spatiotemporal_analysis').joinpath('AEROMMA_MetNav_DC8_20230822.ict')
 
 def main():
     data, coords = read_icartt_data_files(data_file_name, coord_file_name)
