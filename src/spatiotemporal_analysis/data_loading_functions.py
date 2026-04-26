@@ -56,7 +56,7 @@ def time_align(VOC_dict, time_data, time_coord, lat, lon):
 
     combined_data = pd.merge(coord_df, VOC_df,  on='Time') # Source for using pd.merge(): https://www.geeksforgeeks.org/pandas/python-pandas-merging-joining-and-concatenating/?ysclid=mnbyz36yop687525772
     #combined_data = combined_data.dropna()
-    print(f"Combined data layout: {combined_data.head()}")
+    print(f"Combined data layout:\n {combined_data.head()}")
     print(f'Combined data shape: {combined_data.shape}')
     return combined_data
 
