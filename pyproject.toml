@@ -7,7 +7,7 @@ name = "spatiotemporal-mapping"
 version = "0.1.0"
 description = "Plots spatiotemporal VOC data on a map for quick source identification"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">= 3.9"
 authors = [
     {name = "Maria Carter", email = "maria.carter@colorado.edu"},
