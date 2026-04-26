@@ -7,11 +7,11 @@ import matplotlib.dates as mdates
 import plotly.express as px 
 
 # Import the data processing and plotting functions
-from data_loading_functions import read_icartt_data_files
-from data_loading_functions import select_VOC
-from data_loading_functions import time_align
-from plotting_functions import plot_VOC_map
-from plotting_functions import plot_peaks_above_baseline
+from .data_loading_functions import read_icartt_data_files
+from .data_loading_functions import select_VOC
+from .data_loading_functions import time_align
+from .plotting_functions import plot_VOC_map
+from .plotting_functions import plot_peaks_above_baseline
 
 # Analysis setup - these inputs can be modified depending on your interests and what files you want to look at 
 # USOS
