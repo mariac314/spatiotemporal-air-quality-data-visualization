@@ -18,7 +18,6 @@ dependencies = [
     "pandas >= 2.0.0",
     "icartt >= 2.0.0",
     "plotly >= 6.0.0",
-    "kaleido >= 1.2.0",
 ]
 
 [project.optional-dependencies]
