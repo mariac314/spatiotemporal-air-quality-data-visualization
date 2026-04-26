@@ -24,4 +24,5 @@ dependencies = [
 dev = ["build", "twine"]
 
 [project.scripts]
-#run-lorenz = "lorenz_ens.run_lorenz_ensemble:main"
+run-spatiotemporal-analysis = "spatiotemporal_analysis.spatiotemporal_mapping_analysis:main"
+
