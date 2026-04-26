@@ -12,6 +12,10 @@ requires-python = ">= 3.9"
 authors = [
     {name = "Maria Carter", email = "maria.carter@colorado.edu"},
 ]
+
+[tool.setuptools.package-data]
+"spatiotemporal_analysis" = ["*.ict"] # Source: https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
 dependencies = [
     "numpy >= 1.22",
     "matplotlib >= 3.5",
