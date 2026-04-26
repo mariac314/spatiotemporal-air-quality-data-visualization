@@ -13,9 +13,6 @@ authors = [
     {name = "Maria Carter", email = "maria.carter@colorado.edu"},
 ]
 
-[tool.setuptools.package-data]
-"spatiotemporal_analysis" = ["*.ict"] # Source: https://setuptools.pypa.io/en/latest/userguide/datafiles.html
-
 dependencies = [
     "numpy >= 1.22",
     "matplotlib >= 3.5",
@@ -23,6 +20,9 @@ dependencies = [
     "icartt >= 2.0.0",
     "plotly >= 6.0.0",
 ]
+
+[tool.setuptools.package-data]
+"spatiotemporal_analysis" = ["*.ict"] # Source: https://setuptools.pypa.io/en/latest/userguide/datafiles.html
 
 [project.optional-dependencies]
 dev = ["build", "twine"]
