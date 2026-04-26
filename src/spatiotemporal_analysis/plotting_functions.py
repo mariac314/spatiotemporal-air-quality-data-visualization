@@ -90,7 +90,6 @@ def plot_peaks_above_baseline(VOC, VOC_name, time):
     time_mdt = time_format - pd.Timedelta(hours=6) # UTC is 6 hours ahead of MDT
     time_clean = date + time_mdt
 
-    print(time_clean)
     plt.scatter(time_clean, VOC_above_baseline, 2, 'blue', label='Above baseline')
     plt.scatter(time_clean, VOC_below_baseline, 2, 'orange', label='Below baseline')
     plt.axhline(y = baseline_mean_with_noise, color='black', linestyle='--', label='Baseline mean + 3$\sigma$')
