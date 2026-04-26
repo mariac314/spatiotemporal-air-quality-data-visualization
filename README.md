@@ -13,8 +13,8 @@ cd spatiotemporal-air-quality-data-visualization
 # Install in editable mode
 pip install -e .
 
-# Can Python import it from anywhere? Test in your home directory
-cd ~
+# Can Python import it from anywhere? 
+cd /tmp
 
 # Run it from the command line
 run-spatiotemporal-analysis
