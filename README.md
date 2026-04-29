@@ -17,8 +17,30 @@ pip install -e .
 cd /tmp
 
 # Run it from the command line
-run-spatiotemporal-analysis # This runs using pre-determined inputs, which can be changed as seen below
+run-spatiotemporal-analysis # This runs using pre-determined inputs, which can be changed as seen in the example code
 ```
+## Functions
+1. ```read_icartt_data_files(data_file_name, coord_file_name)```
+  - Purpose: Load the data and coordinate icartt files
+  - Input: data file name, coordinate file name (these files are in the same folder as the py files)
+  - Output: Confirmation that the files are loaded by printing data type and headers
+2. ```select_VOC(VOC_name, data)```
+  - Purpose: Extract the desired VOC from the dataset and explore its variable properties
+  - Input: VOC name (as seen in the data file headers) and dataset from function 1 (read_icartt_data_files())
+  - Output: an array of the VOC that can be used for plotting - will also display missing data value flags, data units, and data type and shape
+3. ```time_align(VOC_dict, time_data, time_coord, lat, lon)```
+  - Purpose: Time-align the VOC and coordinate datasets to prevent future alignment and shape errors
+  - Input: Dictionary of VOC names and corresponding arrays (from select_VOC()), time arrays from the VOC and coordinate datasets, and latitude and longitude from the coordinate dataset
+  - Output: Dataframe that has the aligned time points and corresponding coordinates and select VOCs
+4. ```plot_VOC_map(VOC_name, VOC, lat, lon)```
+  - Purpose: plot selected VOCs on corresponding coordinate points and view mixing ratio along the route
+  - Input: VOC name, and VOC data, lat, lon from the time-aligned dataframe (Function 3)
+  - Output: A map with the VOC mixing ratio plotted on top of the route coordinates
+5. ```plot_peaks_above_baseline(VOC, VOC_name, time)```
+  - Purpose: Observe VOC spikes and plumes by viewing the time series of the data
+  - Input: VOC name, and VOC data and time from the time-aligned dataframe (Function 3)
+  - Output: A plot of the VOC time series with plume points and background points differentiated by color
+    
 ## Example Usage 
 ```python
 from data_loading_functions import read_icartt_data_files
