@@ -65,7 +65,7 @@ def main():
     VOC_name = "Methanol"
     # This will generate a map with the VOC mixing ratio plotted along the measurement route
     plot_VOC_map(VOC_name, VOC_plot, lat_plot, lon_plot) 
-    #
+    # This will generate the time series highlighting VOC enhancements above background
     plot_peaks_above_baseline(VOC_plot, VOC_name, time_plot)
 
 if __name__ == "__main__":
