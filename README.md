@@ -3,7 +3,7 @@ Final project that maps spatiotemporal volatile organic compound (VOC) measureme
 
 
 ## GitHub cloning and install instructions
-```bash
+```python
 # Clone this repository
 git clone https://github.com/mariac314/spatiotemporal-air-quality-data-visualization.git
 
@@ -20,7 +20,7 @@ cd /tmp
 run-spatiotemporal-analysis # This runs using pre-determined inputs, which can be changed as seen below
 ```
 ## Example Usage 
-```bash
+```python
 # Import the data processing and plotting functions
 from data_loading_functions import read_icartt_data_files
 from data_loading_functions import select_VOC
